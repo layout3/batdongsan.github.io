@@ -1,0 +1,602 @@
+.home-slider
+	.owl-carousel
+		.item
+			.title
+				padding-top: 1rem
+				h1 
+					+fz(1.3rem)
+				p 
+					color: darken(#fff, 20%)
+		.owl-nav
+			padding-bottom: .7rem
+			button
+				background: $main
+				border-radius: 0
+				&.disabled
+					background: #000
+				&:hover
+					background: $sen
+				&:focus
+					outline: none
+				i
+					+fz(1rem)
+					width: 3rem
+					height: 3rem
+					line-height: 3rem
+	+media-breakpoint-up(md)
+		.owl-carousel
+			.item
+				position: relative
+				img
+				.title
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					text-align: center
+					background-image: linear-gradient(#ffffff00, black)
+					h1 
+						+fz(2rem)
+						margin-bottom: 0
+						color: #fff
+						padding-bottom: .5rem
+					p 
+						margin-bottom: 2rem
+						line-height: 1.5rem
+						font-size: 1.3rem
+			.owl-prev, .owl-next
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+			.owl-prev
+				left: 2rem
+			.owl-next
+				right: 2rem
+			.owl-nav 
+				padding-bottom: 0
+				button
+					i
+						+fz(1rem)
+						width: 2rem
+						height: 2rem
+						line-height: 2rem
+.home-news
+	padding-top: 3rem
+	padding-bottom: 1rem 
+	h2 
+		position: relative 
+		padding-bottom: 1rem
+		&:before
+			content: ''
+			display: block
+			height: 3px
+			width: 60px
+			bottom: 5px
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute
+			background: #1abc9c
+		&:after
+			content: ''
+			display: block
+			height: 17px
+			width: 17px
+			border-radius: 50%
+			border: 3px #1abc9c solid
+			background: #fff
+			bottom: -1px
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute
+	a 
+		text-decoration: none
+		figure 
+			.blockimg 
+				img 
+					width: 100%
+		figcaption 
+			h3 
+				+fz(1.3rem) 
+				padding-top: (1rem)
+				color: #1abc9c
+				margin: 0
+			time 
+				color: #000
+			p 
+				line-height: 1rem
+				+fz(.8rem)
+				color: darken(#000, 60%)
+	+media-breakpoint-up(md)
+		h2 
+			position: relative
+			padding-top: 2rem
+		a 
+			figure 
+				.blockimg 
+					position: relative 
+					overflow: hidden 
+					&:before 
+						content: ''
+						height: 100%
+						width: 100%
+						left: 0 
+						top: 0 
+						position: absolute 
+						transition: 0.5s all ease-in-out
+					img 
+						filter: grayscale(100%)
+						transition: 0.5s all ease-in-out
+			figcaption 
+				h3 
+					+fz(1.75rem) 
+					padding-top: 1rem
+					color: #000
+					margin: 0
+				time 
+					color: #887e7e
+				p 
+					+fz(1rem)
+					line-height: 1.3rem
+					color: #887e7e
+					padding-bottom: 4rem 
+			&:hover
+				figure 
+					.blockimg 
+						&:before 
+							box-shadow: 0px 0px 0px 5px #1abc9c inset 
+							z-index: 100
+						img 
+							filter: grayscale(0%)
+							transform: scale(1.3)
+				figcaption 
+				h3 
+					padding-top: (1rem)
+					color: #1abc9c
+					margin: 0
+				time 
+					color: #000
+				p 
+					+fz(1rem)
+					color: darken(#000, 60%)
+.home-grow 
+	background: url('../img/background_dhpt_1_.png') no-repeat center center 
+	background-attachment: fixed 
+	padding: 1.5rem 0 
+	h4 
+		position: relative 
+		padding-bottom: 1rem
+		color: #000 
+		&:before
+			content: ''
+			display: block
+			height: 3px
+			width: 60px
+			bottom: 5px
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute
+			background: #1abc9c
+		&:after
+			content: ''
+			display: block
+			height: 17px
+			width: 17px
+			border-radius: 50%
+			border: 3px #1abc9c solid
+			background: #fff
+			bottom: -1px
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute 
+	a 
+		text-decoration: none 
+		figure 
+			.blockimg 
+					i 
+						+fz(3rem)
+						padding-bottom: 1rem 
+						color: #1abc9c 
+			figcaption 
+				h5 
+					+fz(1rem)
+					color: #1abc9c 
+				p 
+					line-height: 1rem
+					+fz(.8rem) 
+					color: #000 
+	+media-breakpoint-up(md) 
+		padding: 5rem 0 
+		h4 
+			position: relative 
+			padding-bottom: 1rem
+			font-size: 2rem
+			&:before
+				content: ''
+				display: block
+				height: 3px
+				width: 60px
+				bottom: 5px
+				left: 50%
+				transform: translateX(-50%)
+				position: absolute
+				background: #1abc9c
+			&:after
+				content: ''
+				display: block
+				height: 17px
+				width: 17px
+				border-radius: 50%
+				border: 3px #1abc9c solid
+				background: #fff
+				bottom: -1px
+				left: 50%
+				transform: translateX(-50%)
+				position: absolute 
+		a 
+			text-decoration: none 
+			figure 
+				.blockimg 
+						i 
+							+fz(5rem)
+							padding-top: 2rem 
+							padding-bottom: 1rem 
+							color: #000 
+				figcaption 
+					h5 
+						+fz(1.3rem) 
+						padding-top: (.5rem)
+						color: #000
+						margin: 0
+					p 
+						+fz(1rem)
+						line-height: 1.3rem
+						color: #887e7e
+				&:hover 
+					.blockimg 
+						i 
+							+fz(5rem)
+							padding-bottom: 1rem 
+							color: #1abc9c 
+					figcaption 
+						h5 
+							color: #1abc9c
+						p 
+							+fz(1rem)
+							line-height: 1.3rem
+							color: #000 
+.home-xemthem 
+	padding: 2rem 0 
+	background: url('../img/xemthem_1_.png') no-repeat repeat center center 
+	h5 
+		+fz(.8rem)
+		color: #fff 
+		padding-bottom: .7rem 
+	a 
+		color: #fff 
+		background: #1abc9c 
+		border-radius: 30px 
+		padding: 5px 15px 
+	+media-breakpoint-up(md) 
+		padding: 4rem 0 
+		h5 
+			+fz(1.75rem)
+			color: #fff 
+			padding-bottom: .7rem 
+		a 
+			+fz(1.5rem)
+			color: #fff 
+			background: #1abc9c 
+			border-radius: 30px 
+			padding: 15px 45px 
+			&:hover 
+				color: #000 
+.home-dinhhuong 
+	padding-top: 2rem
+	padding-bottom: 2rem 
+	h6
+		position: relative 
+		padding-bottom: 1rem
+		font-size: 1.5rem 
+		&:before
+			content: ''
+			display: block
+			height: 3px
+			width: 60px
+			bottom: 5px
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute
+			background: #1abc9c
+		&:after
+			content: ''
+			display: block
+			height: 17px
+			width: 17px
+			border-radius: 50%
+			border: 3px #1abc9c solid
+			background: #fff
+			bottom: -1px
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute
+	figure 
+		.blockimg 
+			img 
+				width: 100%
+	.item 
+		display: flex
+		justify-content: center 
+		ul 
+			li 
+				a 
+					text-decoration: none 
+					font-size: .8rem 
+					color: #000 
+					padding: 0 10px
+					padding-top: 10px 
+	+media-breakpoint-up(md)
+		padding-top: 5rem 
+		figure 
+			.blockimg 
+				position: relative 
+				overflow: hidden 
+				&:before 
+					content: ''
+					height: 100%
+					width: 100%
+					left: 0 
+					top: 0 
+					position: absolute 
+					transition: 0.5s all ease-in-out
+				img 
+					filter: grayscale(100%)
+					transition: 0.5s all ease-in-out
+			&:hover 
+				.blockimg 
+					&:before
+						box-shadow: 0px 0px 0px 5px #1abc9c inset 
+						z-index: 101 
+					img 
+						filter: grayscale(0%)
+						transform: scale(1.3)
+		.item 
+			display: flex
+			justify-content: center 
+			ul 
+				li 
+					a 
+						text-decoration: none 
+						font-size: 1.2rem 
+						color: #000 
+						padding: 10px 15px 
+						&:hover 
+							color: #fff 
+							background: #1abc9c 
+							border-radius: 30px 
+.home-review 
+	background: url('../img/xemthem_1_.png') no-repeat center center 
+	min-height: 200px 
+	.luong 
+		color: #fff 
+		padding-top: 2rem 
+		&:before
+			content: ''
+			display: block
+			height: 3px
+			width: 60px
+			bottom: 5px
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute
+			background: #1abc9c
+		&:after
+			content: ''
+			display: block
+			height: 17px
+			width: 17px
+			border-radius: 50%
+			border: 3px #1abc9c solid
+			background: #fff
+			bottom: -1px
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute
+	.owl-carousel
+		.item
+			justify-content: center 
+			align-items: center 
+			display: flex 
+			flex-direction: column 
+			.blockimg 
+				position: relative 
+				overflow: hidden 
+				&:before
+					position: absolute 
+					content: ''
+					height: 100%
+					width: 100%
+					left: 0 
+					bottom: 0 
+					box-shadow: 0px 0px 0px 3px #1abc9c inset 
+					border-radius: 50%
+				img
+					border-radius: 50%
+					width: 100px 
+			.title
+				.luong03
+					max-width: 500px 
+					color: #fff 
+					line-height: 1.3rem 
+					font-size: .8rem 
+					margin: 0
+				.luong01 
+					padding-top: .5rem 	
+					color: #1abc9c 
+					font-size: 1.2	rem 
+				.luong02 
+					color: #fff 
+		.owl-nav
+			padding-bottom: 2rem
+			button
+				background: $main
+				border-radius: 0
+				&.disabled
+					background: #000
+				&:hover
+					background: $sen
+				&:focus
+					outline: none
+				i
+					+fz(1rem)
+					width: 3rem
+					height: 3rem
+					line-height: 3rem
+	+media-breakpoint-up(md) 
+		padding-top: 2rem 
+		padding-bottom: 5rem 
+		.luong 
+			color: #fff 
+			font-size: 2rem 
+			padding-top: 5rem
+		.owl-carousel
+			padding-bottom: 0
+			.item
+				justify-content: center 
+				align-items: center 
+				display: flex 
+				flex-direction: column 
+				.blockimg 
+					position: relative 
+					overflow: hidden 
+					&:before
+						position: absolute 
+						content: ''
+						height: 100%
+						width: 100%
+						left: 0 
+						bottom: 0 
+						box-shadow: 0px 0px 0px 3px #1abc9c inset 
+						border-radius: 50%
+					img
+						border-radius: 50%
+						width: 100px 
+				.title
+					p 
+						color: #fff 
+						line-height: 1.75rem 
+						font-size: 1.5rem 
+					.luong01 
+						padding-top: .5rem 	
+						color: #1abc9c 
+						font-size: 2rem
+					.luong02 
+						font-size: 1.2rem 
+						padding-bottom: 2rem 
+					.luong03 
+						padding-bottom: 1rem
+						font-size: 1.5rem 
+						line-height: 1.5rem
+			.owl-nav
+				padding: 0
+				margin: 0
+				button
+					background: $main
+					border-radius: 0
+					&.disabled
+						background: #000
+					&:hover
+						background: $sen
+					&:focus
+						outline: none
+					i
+						+fz(1rem)
+						width: 3rem
+						height: 3rem
+						line-height: 3rem
+				.owl-prev, .owl-next
+					position: absolute
+					top: 40%
+					transform: translateY(-50%)
+				.owl-prev
+					left: 2rem
+				.owl-next
+					right: 2rem
+				.owl-nav 
+					padding-bottom: 0
+					button
+						i
+							+fz(1rem)
+							width: 2rem
+							height: 2rem
+							line-height: 2rem
+.home-clients
+	.owl-carousel
+		.item 
+			padding-top: 1rem 
+			justify-content: center 
+			align-items: center 
+			display: flex 
+			img 
+				width: 200px
+		// Phần Control
+		.owl-nav
+			padding-bottom: 1.5rem 
+			margin: 0
+			button 
+				background: $main
+				border-radius: 0
+				&.disabled
+					background: #000
+				&:hover
+					background: $sen
+				&:focus
+					outline: none
+				i
+					+fz(1rem)
+					width: 3rem
+					height: 3rem
+					line-height: 3rem
+	+media-breakpoint-up(md) 
+		.owl-carousel
+			.item 
+				+pad(.5rem)
+				justify-content: center 
+				align-items: center 
+				display: flex 
+				img 
+					width: 150px
+			// Phần Control
+			.owl-nav
+				margin-bottom: 2rem
+				button 
+					background: $main
+					border-radius: 0
+					&.disabled
+						background: #000
+					&:hover
+						background: $sen
+					&:focus
+						outline: none
+					i
+						+fz(1rem)
+						width: 2rem
+						height: 2rem
+						line-height: 2rem
+				.owl-prev, .owl-next
+					position: absolute
+					top: 30%
+					transform: translateY(-50%)
+				.owl-prev
+					left: -2rem
+				.owl-next
+					right: -2rem
+				.owl-nav 
+					padding-bottom: 0
+					button
+						i
+							+fz(.5rem)
+							width: 1rem
+							height: 1rem
+							line-height: 1rem
+
+

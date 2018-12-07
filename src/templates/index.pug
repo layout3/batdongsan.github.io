@@ -1,0 +1,119 @@
+extends _layout/layout
+
+//- Các giá trị mặc định cho trang web
+block variables
+	- var title = 'Home'
+	- var description = 'Description for home page'
+	- var bodyclass = 'home'
+
+//- Phần khai báo body
+block body
+	//- Bạn viết code vào đây nhớ là phải mở đầu bằng section ở mỗi khối
+	section.home-slider
+		.owl-carousel.owl-theme
+			-for (x=1;x<3;x++)
+				.item
+					img(src="./img/background_"+x+"_.png", alt="")
+					.title
+						.container
+							.row
+								.col.text-center
+									h1 Chúng tôi là FullStack Việt Nam
+									p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem esse eligendi mollitia quod sit ipsum, neque nam quos similique at labore voluptas! 
+	section.home-news
+		.container
+			.row
+				.col.text-center
+					h2 
+						b TIN TỨC 24H
+			.row
+				-for (x=1;x<4;x++)
+					.col-md-4.mt-4
+						a(href="#")
+							figure
+								.blockimg
+									img(src="img/tintuc_"+x+"_.png", alt="")
+								figcaption
+									h3 Chúng tôi là FullStack Việt Nam
+									time 21/02/99
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente obcaecati accusantium eveniet! Ratione maiores, aut ad aperiam molestias iure soluta, consequatur voluptas earum quam iste. Quae, nulla unde! Recusandae, aliquam? 
+	section.home-grow 
+		.container
+			.row
+				.col.text-center
+					h4 
+						b ĐỊNH HƯỚNG XHCN
+			.row 
+				-for (x=1;x<5;x++)
+					.col-md-3.mt-4 
+						a(href="#")
+							figure 
+								.blockimg 
+									i.fa.fa-file-o
+								figcaption 
+									h5 
+										b TẦM NHÌN
+									p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut accusamus ipsum placeat inventore, aliquid dolorem, dignissimos repudiandae et quasi rerum quaerat 
+	section.home-xemthem 
+		.container 
+			.row 
+				.col-10.offset-1.text-center 
+					h5 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil exercitationem earum qui amet, soluta itaque molestiae iste cum eius, assumenda nam. Unde voluptate placeat magnam beatae ducimus eius doloribus aperiam. 
+				.col-8.offset-2.text-center 
+					a.btn.btn-luong(href="#") XEM THÊM 
+	section.home-dinhhuong 
+		.container
+			.row
+				.col.text-center.mb-2 
+					h6 
+						b ĐỊNH HƯỚNG XHCN
+			.row
+				.col
+					.item
+						ul.nav.text-center
+							li
+								a(href='#') 
+									b TẤT CẢ 
+							li
+								a(href='#') 
+									b GROUP 
+							li
+								a(href='#') 
+									b TIN THỊ TRƯỜNG 
+							li
+								a(href='#') 
+									b TIN VỊT
+			.row
+				-for (x=1;x<4;x++)
+					.col-md-4.mt-4
+						figure
+							.blockimg
+								img(src="img/tintuc_"+x+"_.png", alt="")
+	section.home-review 
+		.container 
+			.row 
+				.col.text-center
+					p.luong 
+						b KHÁCH HÀNG NÓI
+		.owl-carousel.owl-theme
+			-for (x=1;x<5;x++)
+				.item.mt-4 
+					.blockimg 
+						img(src="./img/icon-our-0"+x+".png", alt="")
+					.title 
+						p.luong03.text-center.pt-4 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita necessitatibus et pariatur fugiat itaque? Repellat quisquam ipsam ipsa voluptatibus. Facere nulla blanditiis autem voluptas fugit corporis magnam nisi sunt laboriosam!
+						p.luong01.mb-0.text-center
+							b BAO NGUYEN 
+						p.luong02.mb-0.text-center
+							i CEO COMPANY
+	section.home-clients
+		.container
+			.row
+				.col
+					.owl-carousel.owl-theme
+						- for(x=1;x<10;x++)
+							.item
+								if (x < 7)
+									img(src="./img/clients_"+x+".png", alt="")
+								else
+									img(src="./img/clients_"+(x-3)+".png", alt="")
